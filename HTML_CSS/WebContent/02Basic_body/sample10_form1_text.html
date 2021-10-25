@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form 태그 실습</title>
+</head>
+<body>
+<!-- 태그에 부여 할 수있는 것들
+id: 태그에 부여, 중복 안됨, 유일한 값, 같은 html안에서 특정 tag(dom)을 찾을 떄, 기호 #
+class: 전체에 태그 부여 , 중복됨, 같은 html안에서 특정 tag(dom)을 모두 찾을 떄,한번에 여러 태그에 효과를 줄때 , 기호.
+name: 태그 부여, 같은 html안에서 특정 tag(dom)을 찾을 떄 사용하기도 하지만 주로 서버에서 데이터를 꺼낼때(파싱)시에 키값을 사용
+ -->
+ <!-- 폼의 이름은 myform ,target.html파일에게 3가지 데이터를 get방식으로 전송(submit)함 -->
+ <!-- 아무것도 안쓰면 기본이 get방식 -->
+<form name="myForm" action="target.html" method="post" >
+아이디:<input type="text" name="userid" value="test" ><br>
+비밀번호:<input type="text" name="passwd" ><br>
+비밀번호:<input type="passwd" name="passwd2" ><br>
+
+
+<input type="submit" value="전송">
+</form>
+
+</body>
+</html>
