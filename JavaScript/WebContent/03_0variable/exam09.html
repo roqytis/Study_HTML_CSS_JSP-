@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var scope="hello"; //전역
+
+//자바스크립트만의 특징
+function f() { //자바스크립트 함수 function 리턴타입 명시 필요없음 함수이름(매개변수)
+       document.write(scope+"<br>");
+       var scope="test";
+       document.write(scope+"<br>");
+	}/////////////////
+	console.log(scope);
+	f();// 함수 호출 주의 - 함수는 명시적으로 호출해야 실행됨
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* //1
+alert("경고문.....");
+console.log("=================") */
+
+/* //2. 함수 호출
+function aaa(){
+	alert("aaa함수에서 경고문...");
+	console.log("===============")
+}
+aaa(); */
+
+/* //3 setTimeout
+setTimeout(function(){
+	alert("bbb");
+},3000);
+//3초후 실행 */
+
+/* //4 
+setTimeout(bbb,3000);
+function bbb(){
+	alert("bbb");
+} */
+
+//2. setTimeout 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 함수호출
+//3. setInterval 함수, 시간을 설정해서 지정된 시간이 흐른뒤에 반복적으로 함수호출
+       var kkk=setInterval(function () {
+		console.log("setInterval")
+	},3000)
+	
+	setTimeout(function(){  //10초뒤에 setInterval 삭제
+		clearInterval(kkk);
+	},10000);
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function kkk(){
+	 console.log("버튼클릭");
+}
+    window.onload = function () {
+    	    var xxx =	document.getElementById('xxx');
+      /*   xxx.addEventListener("click", function (){
+       	 console.log("버튼클릭");
+        }  , false); *///CLICK 이벤트를 달고 처리함수 구현 
+       /*  var xxx= document.getElementById("xxx");*/
+        xxx.addEventListener("click", kkk, false);  //이벤트이름에 on이빠짐- 처리 함수를 따로 구현함 
+        
+        
+        
+        var myForm= document.getElementById("myForm");
+        myForm.addEventListener("submit", function() {//event를 직접 넘겨 받음
+       //submit이벤트 발생시 처리함수 직접 구현 
+       		event.preventDefault();//event내장객체 바로 사용함 
+        
+        	console.log("submit취소");      
+        	//return false;  안먹힘
+        }, false);
+        
+	}// end init   	
+    	
+
+  
+</script>
+</head>
+<body>
+<form action="target.html" id="myForm">
+아이디<input type="text" name="userid"><br>
+비번<input type="text" name="passwd"><br>
+<input type="submit" value="로그인">
+<input type="reset" value="취소"><br>
+ <button > form 클릭</button>
+</form>
+ <button id="xxx">클릭</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

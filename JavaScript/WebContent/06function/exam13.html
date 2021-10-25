@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//함수에서 리턴갑으로 함수자체를 리턴시킴
+
+function aaa(){
+	console.log("aaa 함수")
+}
+function bbb(){
+	console.log("bbb 함수");
+	return aaa;
+}
+//////////////////////////
+function ccc(){
+	return function(n1,n2){
+		return n1+n2;
+	};
+}
+//3. 일급개체의 세번쨰 특징- 리턴값에 함수 사용
+var x=bbb();
+console.log(x);
+x();
+/////////////////////////////////
+var y=ccc();//함수 호출 // y=function(n1,n2){return n1+n2} 리턴함수 저장
+console.log(y);
+
+console.log(y(10,20));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

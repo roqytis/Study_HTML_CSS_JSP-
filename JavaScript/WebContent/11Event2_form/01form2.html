@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    window.onload=function(){
+    	document.getElementById("update")
+    	.addEventListener("click",update,false);
+    	document.getElementById("sendForm")
+    	.addEventListener("click",sendForm,false);
+    	document.getElementById("delete")
+    	.addEventListener("click",del,false);
+    	document.getElementById("send")
+    	.addEventListener("click",send,false);
+    	
+    }
+   
+    
+
+    function del(){
+    	var myForm=document.getElementById("myForm");
+        	myForm.action="delete.html";
+        	event.preventDefault	//이벤트 정지
+        }
+    function sendForm(){
+    	var myForm=document.getElementById("myForm");
+        	myForm.action="send.html";
+        	event.preventDefault	//이벤트 정지
+        }
+    function update(){
+    	var myForm=document.getElementById("myForm");
+        	myForm.action="update.html";
+        	event.preventDefault	//이벤트 정지
+        }
+    function send(){
+    	console.log("zzz================");
+    	var myForm=document.getElementById("myForm");
+        	myForm.action="send.html"; // 폼 바깥의 버튼은 페이지 이동이 안됨
+             	myForm.submit();
+        	
+               }
+    function test(){
+    	event.preventDefault();	
+    	location.href="send.html";
+    }
+</script>
+
+</head>
+<body>
+<form action="target.html" id="myForm">
+아이디<input type="text" name="userid"><br>
+비밀번호<input type="text" name="passwd"><br>
+<input type="submit" value="전송"><br>
+<button id="sendForm">전송2</button>
+<button id="update">수정</button>
+<button id="delete">삭제</button>
+<button onclick="test()">인라인클릭</button>
+
+
+</form>
+<hr>
+<button id="send">전송3</button>
+</body>
+</html>

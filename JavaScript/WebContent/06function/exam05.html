@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function aaa(){
+	console.log("aaa호출됨");
+	return 100;//리턴값의 사용 
+   }
+   var x = aaa();//호출, 리턴값 받기 
+ ////////////////////////////////////////////////////
+ ///자바스트립트의 특이점 
+   var y = aaa;//호출이 아닌 함수 이름 이용  변수에 저장 
+   console.log("y======",y);
+   var result= y();//함수 호출 
+   console.log(result);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

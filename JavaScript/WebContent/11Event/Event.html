@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 
+ 1. 각 태그마다 이벤트 처리 하여 함수 호출
+ <body onload="init()">
+ 
+ 2.  window.onload = init;
+  
+ function init(){
+ 	console.log("모든 html이 모두 DOM으로 생성된후 실행");
+ 	
+ 	document.getElementById("xxx").onclick=function(){
+ 		console.log("xxx() 호출");
+ 	};
+	
+ 3.  window.onload = function(){	   
+	  var imgs = document.getElementsByTagName("img"); 
+	  for(var i=0; i < imgs.length-1; i++){
+		  var img = imgs[i];
+		  img.onmouseover=function(){
+			  console.log(imgs[3].src = this.src);
+		  }		  
+	  }
+  };
+
+ 
+ 
+ */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
